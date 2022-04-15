@@ -1,0 +1,179 @@
+.PNRChangeBox{
+  width: 80%;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 25%)
+}
+
+.PNRChangeBox > .PNRContent {
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+.PNRChangeBox > .PNRControls {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  align-items: center;
+  position: relative;
+}
+.PNRChangeBox > .PNRControls > button {
+  margin: 10px 0;
+  margin-right: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.PNRChangePane {
+  position: relative;
+  width: 50%;
+  flex: 1;
+  background-color: #f2f2f2;
+  margin: 0px 5px 10px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.PNRChangePane.right {
+  margin: 0px 10px 10px 0;
+}
+
+.PNRChangePane > .header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.PNRChangePane > .content {
+  width: 100%;
+  height: calc(100% - 50px);
+  padding: 12px;
+  background-color: white;
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%);
+  transition: all .16s ease-out;
+}
+.PNRChangePane > .content:hover {
+  box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 15%);
+}
+.PNRChangePane.right > .content {
+  border-radius: 0 16px 16px 0;
+}
+
+.PNRChangePane > .content > .primary {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.PNRChangePane > .content > .primary > .name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #363636;
+}
+.PNRChangePane > .content > .primary > .pnr {
+  font-size: 18px;
+  font-weight: 100;
+  color: #83888b;
+}
+
+.PNRChangePane > .content > .train {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 5px 0px rgb(0 0 0 / 10%);
+  padding: 20px 20px 15px 20px;
+}
+.PNRChangePane > .content > .train > div {
+  font-size: 15px;
+  margin: 0;
+}
+.PNRChangePane > .content > .train > div > p {
+  margin: 0;
+}
+.PNRChangePane > .content > .train > div > span,
+.PNRChangePane > .content > .train > div > p > span {
+  display: inline-block;
+  min-width: 50px;
+  font-weight: 700;
+}
+.PNRChangePane > .content > .train > div.from,
+.PNRChangePane > .content > .train > div.detail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PNRChangePane > .content > .footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 20px 5px 20px;
+}
+.PNRChangePane > .content > .footer > .date {
+  font-size: 14px;
+  align-self: flex-end;
+  font-weight: 100;
+  color: #808080;
+}
+.PNRChangePane > .content > .footer > .price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 18px;
+  font-weight: bold;
+  color: #363636;
+}
+.PNRChangePane > .content > .footer > .price > span:first-of-type {
+  font-size: 24px;
+  font-weight: 100;
+  color: #363636;
+}
+.PNRChangePane > .content > .footer > .price > span:last-of-type {
+  font-size: 24px;
+}
+
+.PNRControls > button {
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .16s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PNRControls > button >svg {
+  width: 20px;
+  height: 20px;
+}
+
+.openMessage{
+  position: absolute;
+  font-size: 12px;
+  color: rgb(6, 197, 255);
+  left: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition:  0.1s ease-out;
+}
+
+.openMessage:hover{
+  transform: scale(1.02);
+  transition:  0.1s ease-out;
+}
